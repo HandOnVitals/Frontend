@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply text-gray-800;
+}
+
+@layer components {
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+  .title {
+    @apply text-3xl md:text-4xl font-semibold;
+  }
+  .subtitle {
+    @apply font-light;
+  }
+  .nav-link {
+    @apply hover:bg-gray-100 rounded-lg p-2 w-full inline-flex items-center;
+  }
+  .nav-link-label {
+    @apply opacity-0 transition-opacity ease-in-out duration-300 group-hover:opacity-100 ml-4 text-gray-700 font-semibold;
+  }
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #F5F5F5;
+}
