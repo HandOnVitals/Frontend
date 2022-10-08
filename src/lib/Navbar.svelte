@@ -1,21 +1,14 @@
 <script>
-	import { BASE_ROUTE, HEART_RATE_HISTORY_ROUTE, READING_ROUTE } from 'constants/routes';
+	import { goto } from '$app/navigation';
+	import { ACCESS_ROUTE, BASE_ROUTE, HEART_RATE_HISTORY_ROUTE, READING_ROUTE } from 'constants/routes';
+	import { readingsStore } from 'stores';
 </script>
 
-<nav
-	class="group fixed z-10 flex h-screen w-16 flex-col rounded-r-lg bg-white py-8 px-2 drop-shadow-md transition-all duration-300 ease-in-out hover:w-[20%]">
+<nav class="group fixed z-10 flex h-screen w-16 flex-col rounded-r-lg bg-white py-8 px-2 drop-shadow-md transition-all duration-300 ease-in-out hover:w-[20%]">
 	<a class="nav-link" href={READING_ROUTE}>
-		<svg
-			class="h-8 w-8 shrink-0"
-			viewBox="0 0 48 48"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg">
-			<path
-				d="M11 30C11 29.4477 11.4477 29 12 29H26C26.5523 29 27 29.4477 27 30C27 30.5523 26.5523 31 26 31H12C11.4477 31 11 30.5523 11 30Z"
-				fill="#333333" />
-			<path
-				d="M12 34C11.4477 34 11 34.4477 11 35C11 35.5523 11.4477 36 12 36H26C26.5523 36 27 35.5523 27 35C27 34.4477 26.5523 34 26 34H12Z"
-				fill="#333333" />
+		<svg class="h-8 w-8 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M11 30C11 29.4477 11.4477 29 12 29H26C26.5523 29 27 29.4477 27 30C27 30.5523 26.5523 31 26 31H12C11.4477 31 11 30.5523 11 30Z" fill="#333333" />
+			<path d="M12 34C11.4477 34 11 34.4477 11 35C11 35.5523 11.4477 36 12 36H26C26.5523 36 27 35.5523 27 35C27 34.4477 26.5523 34 26 34H12Z" fill="#333333" />
 			<path d="M14 21V18H16V21H19V23H16V26H14V23H11V21H14Z" fill="#333333" />
 			<path
 				fill-rule="evenodd"
@@ -31,16 +24,8 @@
 		<span class="nav-link-label">Leituras</span>
 	</a>
 	<a class="nav-link" href={HEART_RATE_HISTORY_ROUTE}>
-		<svg
-			class="h-8 w-8 shrink-0"
-			viewBox="0 0 48 48"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg">
-			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-				d="M8 40V7H6V41C6 41.5523 6.44772 42 7 42H41V40H8Z"
-				fill="#333333" />
+		<svg class="h-8 w-8 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M8 40V7H6V41C6 41.5523 6.44772 42 7 42H41V40H8Z" fill="#333333" />
 			<path
 				fill-rule="evenodd"
 				clip-rule="evenodd"
@@ -54,14 +39,8 @@
 		</svg>
 		<span class="nav-link-label">Histórico</span>
 	</a>
-	<a class="nav-link mt-auto" href={BASE_ROUTE}>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			stroke="#333333"
-			viewBox="0 0 24 24"
-			stroke-width="1"
-			class="h-8 w-8 shrink-0">
+	<a class="nav-link mt-auto" href={ACCESS_ROUTE}>
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#333333" viewBox="0 0 24 24" stroke-width="1" class="h-8 w-8 shrink-0">
 			<path
 				stroke-linecap="round"
 				stroke-linejoin="round"

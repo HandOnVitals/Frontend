@@ -4,5 +4,3 @@ import { writable } from 'svelte/store';
 
 export const readingStoreKey = 'readings';
 export const readingsStore = sessionStorageWritable<Reading[]>(readingStoreKey, []);
-
-// export const modalStore = writable<boolean>(false);

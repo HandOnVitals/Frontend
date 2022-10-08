@@ -25,6 +25,8 @@ export function vitalSignTo_pt(vitalSign: VitalSign) {
 			return temperature_pt;
 		case bloodOxygen:
 			return bloodOxygen_pt;
+		default:
+			return '';
 	}
 }
 
@@ -38,5 +40,7 @@ export function vitalSignTo_en(vitalSign: VitalSign) {
 			return temperature_en;
 		case bloodOxygen:
 			return bloodOxygen_en;
+		default:
+			return '';
 	}
 }

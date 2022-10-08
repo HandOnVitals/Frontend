@@ -47,9 +47,9 @@
 	</section>
 	<Line class="mt-10" data={graphData} options={graphOptions} />
 	<div class="mt-10 flex justify-between gap-8">
-		<Button text={heartRate} iconSrc={HEART_RATE_IMAGE} to={HEART_RATE_HISTORY_ROUTE} />
-		<Button text={temperature} iconSrc={TEMPERATURE_IMAGE} to={TEMPERATURE_HISTORY_ROUTE} />
-		<Button text={bloodPressure} iconSrc={BLOOD_PRESSURE_IMAGE} to={BLOOD_PRESSURE_HISTORY_ROUTE} />
-		<Button text={bloodOxygen} iconSrc={BLOOD_OXYGEN_IMAGE} to={BLOOD_OXYGEN_HISTORY_ROUTE} />
+		<Button vitalSign={heartRate} iconSrc={HEART_RATE_IMAGE} to={HEART_RATE_HISTORY_ROUTE} />
+		<Button vitalSign={temperature} iconSrc={TEMPERATURE_IMAGE} to={TEMPERATURE_HISTORY_ROUTE} />
+		<Button vitalSign={bloodPressure} iconSrc={BLOOD_PRESSURE_IMAGE} to={BLOOD_PRESSURE_HISTORY_ROUTE} />
+		<Button vitalSign={bloodOxygen} iconSrc={BLOOD_OXYGEN_IMAGE} to={BLOOD_OXYGEN_HISTORY_ROUTE} />
 	</div>
 </main>
