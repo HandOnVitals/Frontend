@@ -31,7 +31,7 @@
 <!-- mx-16 makes text aligned with nav -->
 <main class="my-20 ml-32 mr-16 w-full">
 	<DateTimeModal {dates} bind:searchOpen {setCurrentReading} />
-	<section class="flex justify-between">
+	<section class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:gap-0">
 		<div>
 			<h1 class="title">{readingTitle}</h1>
 			<h2 class="subtitle mt-2 capitalize-first">
@@ -40,7 +40,8 @@
 		</div>
 		<SearchButton on:click={() => (searchOpen = true)} />
 	</section>
-	<section class="mt-20 flex justify-between gap-4 md:gap-10">
+	<!-- <section class="mt-20 flex justify-between gap-4 md:gap-10"> -->
+	<section class="mt-20 grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2 md:gap-10 lg:grid-cols-4">
 		<Card
 			vitalSign={heartRate}
 			currentAmount={$readingsStore[currentReadingIndex].heartRate}

@@ -4,7 +4,8 @@
 	import { readingsStore } from 'stores';
 </script>
 
-<nav class="group fixed z-10 flex h-screen w-16 flex-col rounded-r-lg bg-white py-8 px-2 drop-shadow-md transition-all duration-300 ease-in-out hover:w-[20%]">
+<nav
+	class="group fixed z-10 flex h-screen max-w-[4rem] flex-col rounded-r-lg bg-white py-8 px-2 drop-shadow-md transition-[max-width] duration-300 ease-in-out hover:max-w-[10rem]">
 	<a class="nav-link" href={READING_ROUTE}>
 		<svg class="h-8 w-8 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M11 30C11 29.4477 11.4477 29 12 29H26C26.5523 29 27 29.4477 27 30C27 30.5523 26.5523 31 26 31H12C11.4477 31 11 30.5523 11 30Z" fill="#333333" />
