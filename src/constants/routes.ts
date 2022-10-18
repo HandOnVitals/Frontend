@@ -1,4 +1,5 @@
 export const BASE_ROUTE = '/';
+export const LOGIN_ROUTE = '/login';
 export const ACCESS_ROUTE = '/access';
 export const READING_ROUTE = '/reading';
 export const HEART_RATE_HISTORY_ROUTE = '/history?vs=heartRate';

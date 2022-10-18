@@ -23,9 +23,13 @@
 
 	function generateReadingTitle(index: number) {
 		if (index === 0) return 'Última leitura';
-		else return `Leitura de ${format(readingDate, "dd/MM/yyyy 'às' HH:mm:ss")}`;
+		else return `Leitura de ${format(readingDate, "dd-MM-yyyy 'às' HH'h':mm'm':ss's'")}`;
 	}
 </script>
+
+<svelte:head>
+	<title>HoV · Leituras</title>
+</svelte:head>
 
 <Navbar />
 <!-- mx-16 makes text aligned with nav -->

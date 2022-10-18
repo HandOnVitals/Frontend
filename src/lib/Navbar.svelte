@@ -1,8 +1,10 @@
 <script>
-	import { goto } from '$app/navigation';
-	import { ACCESS_ROUTE, BASE_ROUTE, HEART_RATE_HISTORY_ROUTE, READING_ROUTE } from 'constants/routes';
-	import { readingsStore } from 'stores';
+	import { ACCESS_ROUTE, HEART_RATE_HISTORY_ROUTE, READING_ROUTE } from 'constants/routes';
 </script>
+
+<svelte:head>
+	<title>HoV | Leituras</title>
+</svelte:head>
 
 <nav
 	class="group fixed z-10 flex h-screen max-w-[4rem] flex-col rounded-r-lg bg-white py-8 px-2 drop-shadow-md transition-[max-width] duration-300 ease-in-out hover:max-w-[10rem]">

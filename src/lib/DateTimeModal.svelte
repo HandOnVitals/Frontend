@@ -45,7 +45,7 @@
 								<Flatpickr {options} bind:value={dateValue} name="date" element="#my-picker">
 									<div class="flatpickr relative" id="my-picker">
 										<input
-											class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+											class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-4 text-sm text-gray-900 placeholder:text-gray-900 focus:border-blue-500 focus:ring-blue-500"
 											type="text"
 											placeholder="Escolha uma data..."
 											data-input />
@@ -60,7 +60,7 @@
 								<div class="relative">
 									<select
 										bind:value={dateTimeValue}
-										class="mt-2 block w-full appearance-none rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-400 focus:border-blue-500 focus:ring-blue-500">
+										class="mt-2 block w-full appearance-none rounded-lg border border-gray-300 bg-gray-50 p-2 pl-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500">
 										<option selected disabled>Escolha uma hora...</option>
 										{#if !dateValue}
 											<option disabled>Escolha uma data primeiro!</option>

@@ -39,6 +39,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>HoV · Histórico {vitalSign_pt}</title>
+</svelte:head>
+
 <Navbar />
 <main class="my-20 ml-32 mr-16 w-full">
 	<section>

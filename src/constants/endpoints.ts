@@ -1,4 +1,7 @@
-const baseUrl = "http://localhost:8000";
+export const pacientReadings = (pacientSNSNumber: string) => `pacients/${pacientSNSNumber}/readings/`;
 
-export const pacientReadings = (q1: string) =>
-    `${baseUrl}/pacients/${q1}/readings/`;
+export const LOGIN_BASE_URL = 'auth/2fa/';
+
+export const LOGIN_2FA_URL = 'auth/token/';
+
+export const REFRESH_TOKEN_URL = 'auth/token/refresh/';
