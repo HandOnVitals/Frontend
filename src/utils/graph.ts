@@ -3,7 +3,7 @@ import { vitalSignUnit } from './vitalSignUtils';
 import { pt } from 'date-fns/locale';
 import type { VitalSign } from 'constants/vitalSigns';
 
-export function generateGraphData(labels: string[], data: number[], label: string): ChartData<'line'> {
+export function generateGraphData(labels: string[], data: number[], label: string) {
 	return {
 		labels: labels,
 		datasets: [
@@ -29,8 +29,8 @@ export function generateGraphOptions(vitalSign: VitalSign): ChartOptions<'line'>
 		scales: {
 			y: {
 				ticks: {
-					callback: function (value: string) {
-						return value + vitalSignUnit(vitalSign);
+					callback: function (tickValue: string | number) {
+						return tickValue + vitalSignUnit(vitalSign);
 					}
 				}
 			},

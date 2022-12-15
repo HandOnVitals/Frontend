@@ -4,7 +4,7 @@
 	import { BLOOD_OXYGEN_HISTORY_ROUTE, BLOOD_PRESSURE_HISTORY_ROUTE, HEART_RATE_HISTORY_ROUTE, TEMPERATURE_HISTORY_ROUTE } from 'constants/routes';
 	import Navbar from 'lib/Navbar.svelte';
 	import { readingsStore } from 'stores';
-	import { Chart, registerables, type ChartData, type ChartOptions } from 'chart.js';
+	import { Chart, registerables, type ChartData, type ChartOptions, type ScatterDataPoint } from 'chart.js';
 	import 'chartjs-adapter-date-fns';
 	import { Line } from 'svelte-chartjs';
 	import { generateGraphData, generateGraphOptions } from 'utils/graph';
@@ -15,7 +15,7 @@
 
 	let vitalSign: VitalSign;
 	let vitalSign_pt: string;
-	let graphData: ChartData<'line'>;
+	let graphData: ChartData<'line', (number | ScatterDataPoint)[], unknown>;
 	let graphOptions: ChartOptions<'line'>;
 
 	const unsubscribe = page.subscribe((val) => {
@@ -49,7 +49,7 @@
 		<h1 class="title">Histórico</h1>
 		<h2 class="subtitle mt-2">{vitalSign_pt}</h2>
 	</section>
-	<Line class="mt-10" data={graphData} options={graphOptions} />
+	<Line class="mt-10 max-h-[60vh]" data={graphData} options={graphOptions} />
 	<div class="mt-10 flex justify-between gap-8">
 		<Button vitalSign={heartRate} iconSrc={HEART_RATE_IMAGE} to={HEART_RATE_HISTORY_ROUTE} />
 		<Button vitalSign={temperature} iconSrc={TEMPERATURE_IMAGE} to={TEMPERATURE_HISTORY_ROUTE} />
